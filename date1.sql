@@ -41,6 +41,20 @@ SELECT DATEDIFF(DATE_ADD('1986-11-11',INTERVAL 80 YEAR),NOW()) AS new_date
 SELECT TIMEDIFF('10:11:11','06:10:10') FROM DUAL;
 
 
+-- YEAR|Month|DAY| DATE(datetime);
+SELECT NOW() FROM DUAL;
+SELECT MONTH(NOW())FROM DUAL;
+SELECT DAY(NOW())FROM DUAL;
+SELECT YEAR('2013-10-10') FROM DUAL;
+--  unix_timestamp();   返回的是1970—1-1 到 现在的毫秒数
+SELECT UNIX_TIMESTAMP()/(365*24*3600) FROM DUAL;
+-- FROM_UNIXTIME()  时间戳   可以把一个unix 的秒数转换为一个指定格式的日期
+-- 意义 在开发中 可以存放一个整数 然后表示 时间 通过 FROM_UNIXTIME() 来转换
+-- 
+SELECT FROM_UNIXTIME(1618483484,'%Y-%m-%d %H:%i:%s') FROM DUAL;
+  
+
+
 
 
 
