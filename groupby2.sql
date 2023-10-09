@@ -30,6 +30,20 @@ SELECT PASSWORD('tian') FROM DUAL;
 -- mysql.user 表示 数据库.表的含义
 SELECT * FROM mysql.user;
 
+-- 案例 请统计各个group by 部门的平均工资，
+-- 并且是大于1000的 并且按照平均工资从高到底排序  order by 
+-- 取出前两行记录  limit
+select deptno, avg(sal) as avg_sal
+	from emp
+	group by deptno
+	having avg_sal > 1000
+	order by avg_sal desc
+	limit 0,2;
+ 
+
+
+
+
 
 
 	 
