@@ -25,3 +25,5 @@ SELECT * FROM t27;
 
 -- 如果这样,表示直接回退事务开始的状态
 ROLLBACK,  
+-- commit 提交事务 一旦执行了commit 在rollback 无法回退
+commit;

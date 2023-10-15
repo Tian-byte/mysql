@@ -17,20 +17,20 @@ SELECT empno,job FROM emp_view01;
 -- 修改视图
 UPDATE  emp_view01 
 SET job = 'MANAGER'
-WHERE empno = 7369;
-SELECT * FROM emp;  -- 查询基表
+where empno = 7369;
+select * from emp;  -- 查询基表
 
 -- 修改视图会影响到基表
-SELECT * FROM emp_view01;
+select * from emp_view01;
 -- 修改基表也会影响到基表
-UPDATE emp
-	SET job = 'SALESAN'
-	WHERE empno = 7369;
+update emp
+	set job = 'SALESAN'
+	where empno = 7369;
 -- 视图中可以再使用视图
-DESC emp_view01;
+desc emp_view01;
 -- 从emp_view01 当中选出两列 no 和 ename 做出新视图
-CREATE VIEW emp_view02 
-	AS 
-	SELECT empno,ename 
-	FROM emp_view01;
-SELECT * FROM emp_view02;
+create view emp_view02 
+	as 
+	select empno,ename 
+	from emp_view01;
+select * from emp_view02;
